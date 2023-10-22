@@ -20,7 +20,7 @@ resource "google_storage_bucket" "source_bucket" {
 data "archive_file" "default" {
   type        = "zip"
   output_path = "/tmp/function-source.zip"
-  source_dir  = "function-source/"
+  source_dir  = "terraform_cf/"
 }
 
 resource "google_storage_bucket_object" "default" {
